@@ -1,35 +1,23 @@
 ---
 layout: bootcamp
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
+venue: Lawrence Berkeley Lab
+address: 1 Cyclotron Road Berkeley, CA 94720
 country: United-States
-humandate: Feb 17-18, 2020
+humandate: Sep 22-23, 2014
 humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
+startdate: 2014-09-22
+enddate: 2014-09-23
 registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
-helper: ["John von Neumann"]
+latlng: 37.8759281,-122.2500418
+instructor: ["Matt Davis", "Jessica Hamrick", "Thomas Kluyver"]
+helper: ["Kyle Barbary", "Yigong Zhang"]
 contact: admin@software-carpentry.org
 ---
 <!--
     Edit the values in the parameter block above to be appropriate for your bootcamp.
     Please use three-letter month names for the 'humandate' field.
 -->
-
-<!-- Remove the block below. -->
-<div align="center">
-  <p><strong><em>
-      This page is a template for bootcamp home pages.
-      <br/>
-      Please see
-      <a href="//github.com/swcarpentry/bc">github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your bootcamp.
-  </em></strong></p>
-</div>
 
 <!--
     This block includes the Eventbrite registration widget if 'eventbrite' has been set in the header.
@@ -73,7 +61,8 @@ contact: admin@software-carpentry.org
 -->
 <p>
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  This course is aimed at anyone with access to Lawrence Berkeley Lab
+  who is interested in improving their software engineering skills.
 </p>
 
 <!--
@@ -82,11 +71,7 @@ contact: admin@software-carpentry.org
 {% if page.latlng %}
 <p>
   <strong>Where:</strong>
-  {{ page.address }}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
+  LBL room <a href="http://map.lbl.gov/#UMAP_2012091840117%7CBLD_2012092167088">15-253</a>.
 </p>
 {% endif %}
 
@@ -139,7 +124,7 @@ contact: admin@software-carpentry.org
       <tr> <td>09:00</td> <td>Version control with Git</td> </tr>
       <tr> <td><em>10:30</em></td> <td><em>Coffee break</em></td> </tr>
       <tr> <td>12:00</td> <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td> <td>Managing data with SQL</td> </tr>
+      <tr> <td>13:00</td> <td>TBD</td> </tr>
       <tr> <td><em>14:30</em></td> <td><em>Coffee break</em></td> </tr>
       <tr> <td>16:00</td> <td>Wrap-up</td> </tr>
     </table>
@@ -222,7 +207,7 @@ contact: admin@software-carpentry.org
 <h2>Setup</h2>
 
 <p>
-  To participate in a Software Carpentry bootcamp, 
+  To participate in a Software Carpentry bootcamp,
   you will need working copies of the software described below.
   Please make sure to install everything
   (or at least to download the installers)
