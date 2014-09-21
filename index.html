@@ -13,6 +13,7 @@ latlng: 37.8759281,-122.2500418
 instructor: ["Matt Davis", "Jessica Hamrick", "Thomas Kluyver"]
 helper: ["Kyle Barbary", "Yigong Zhang"]
 contact: admin@software-carpentry.org
+lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
 ---
 <!--
     Edit the values in the parameter block above to be appropriate for your bootcamp.
@@ -37,22 +38,6 @@ contact: admin@software-carpentry.org
   participants will be encouraged to help one another
   and to apply what they have learned to their own research problems.
 </p>
-
-<!-- This block displays the instructors' names if they are available. -->
-{% if page.instructor %}
-<p>
-  <strong>Instructors:</strong>
-  {{page.instructor | join: ', ' %}}
-</p>
-{% endif %}
-
-<!-- This block displays the helpers' names if they are available. -->
-{% if page.helper %}
-<p>
-  <strong>Helpers:</strong>
-  {{page.helper | join: ', ' %}}
-</p>
-{% endif %}
 
 <!--
     Modify this block to reflect the target audience for your bootcamp.
