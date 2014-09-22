@@ -41,6 +41,16 @@ To do all that, we'll have to learn a little bit about programming.
 *   Display simple graphs.
 </div>
 
+#### Launching IPython Notebook
+
+We'll be writing code in an interface called the [IPython Notebook](http://ipython.org/notebook.html).
+
+In a terminal, type the command `ipython notebook`. It will open in your web
+browser. You should leave the terminal open in the background while you're using IPython.
+
+If it says that it can't find `ipython`, you may need to close your terminal and
+launch the one called 'Anaconda command prompt'.
+
 ### Loading Data
 
 
