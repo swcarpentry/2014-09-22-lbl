@@ -12,12 +12,12 @@ def read_reservoir_data(filename):
     f.readline()
 
     for line in f:
-        name,abbr,altitude,lat,lon,county,month,storage = line.split(',')
+        name, abbr, altitude, lat, lon, county, month, storage = line.split(',')
         altitude = int(altitude)
         lat = float(lat)
         lon = float(lon)
         storage = int(storage)
-        new_row = ResRow(name,abbr,altitude,lat,lon,county,month,storage)
+        new_row = ResRow(name, abbr, altitude, lat, lon, county, month, storage)
         rows.append(new_row)
 
     f.close()
@@ -30,4 +30,10 @@ def filter_reservoir(rows, abbr):
     Keep only the rows that match a reservoir abbreviation.
 
     """
-    pass
+    filtered_rows = []
+
+    for row in rows:
+        if row.abbr == abbr:
+            filtered_rows.append(row)
+
+    return filtered_rows
