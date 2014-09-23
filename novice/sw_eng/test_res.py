@@ -8,6 +8,3 @@ def test_read_reservoir_data():
     assert len(rows) == 6
     assert rows[0].abbr == 'KLM'
     assert rows[-1].abbr == 'NCM'
-
-
-test_read_reservoir_data()
