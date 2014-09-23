@@ -37,3 +37,18 @@ def filter_reservoir(rows, abbr):
             filtered_rows.append(row)
 
     return filtered_rows
+
+
+def filter_year(rows, filter_year):
+    """
+    Keep only the rows that match a year.
+
+    """
+    filtered_rows = []
+
+    for row in rows:
+        month, year = row.month.split('/')
+        if int(year) == int(filter_year):
+            filtered_rows.append(row)
+
+    return filtered_rows
