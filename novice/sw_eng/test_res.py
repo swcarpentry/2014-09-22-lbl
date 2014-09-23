@@ -39,3 +39,21 @@ def test_filter_year():
 
     assert len(filtered_rows) == 1
     assert filtered_rows[0].month[-4:] == year
+
+
+def test_mean_storage():
+    filename = 'reservoir_storage_small.dat'
+    rows = res.read_reservoir_data(filename)
+    abbr = 'NCM'
+    year = 2008
+    rows = res.filter_year(rows, year)
+    rows = res.filter_reservoir(rows, abbr)
+
+    assert res.mean_storage(rows) == 175560
+
+    abbr = 'KLM'
+    year = 2005
+    rows = res.filter_year(rows, year)
+    rows = res.filter_reservoir(rows, abbr)
+
+    assert res.mean_storage(rows) == 388917.333333333
