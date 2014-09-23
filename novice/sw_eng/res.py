@@ -23,3 +23,11 @@ def read_reservoir_data(filename):
     f.close()
 
     return rows
+
+
+def filter_reservoir(rows, abbr):
+    """
+    Keep only the rows that match a reservoir abbreviation.
+
+    """
+    pass
