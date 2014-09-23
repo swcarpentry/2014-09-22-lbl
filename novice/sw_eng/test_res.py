@@ -1,3 +1,5 @@
+import numpy.testing as npt
+
 import res
 
 
@@ -51,9 +53,10 @@ def test_mean_storage():
 
     assert res.mean_storage(rows) == 175560
 
+    rows = res.read_reservoir_data(filename)
     abbr = 'KLM'
     year = 2005
     rows = res.filter_year(rows, year)
     rows = res.filter_reservoir(rows, abbr)
 
-    assert res.mean_storage(rows) == 388917.333333333
+    npt.assert_allclose(res.mean_storage(rows), 388917.333333333)

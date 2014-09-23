@@ -1,5 +1,7 @@
 from collections import namedtuple
 
+import numpy as np
+
 ResRow = namedtuple(
     'ResRow',
     ('name', 'abbr', 'alt', 'lat', 'lon', 'county', 'month', 'storage'))
@@ -12,12 +14,14 @@ def read_reservoir_data(filename):
     f.readline()
 
     for line in f:
-        name, abbr, altitude, lat, lon, county, month, storage = line.split(',')
+        name, abbr, altitude, lat, lon, county, month, storage = \
+            line.split(',')
         altitude = int(altitude)
         lat = float(lat)
         lon = float(lon)
         storage = int(storage)
-        new_row = ResRow(name, abbr, altitude, lat, lon, county, month, storage)
+        new_row = ResRow(
+            name, abbr, altitude, lat, lon, county, month, storage)
         rows.append(new_row)
 
     f.close()
@@ -52,3 +56,16 @@ def filter_year(rows, filter_year):
             filtered_rows.append(row)
 
     return filtered_rows
+
+
+def mean_storage(rows):
+    """
+    Calculate the mean storage value from some rows.
+
+    """
+    storage = []
+
+    for r in rows:
+        storage.append(r.storage)
+
+    return np.mean(storage)
